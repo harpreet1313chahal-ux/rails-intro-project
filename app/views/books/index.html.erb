@@ -23,6 +23,18 @@
               class: "form-select" %>
       </div>
 
+      <div class="col-md-3">
+  <%= select_tag :sort,
+        options_for_select([
+          ["Title (A-Z)", "title_asc"],
+          ["Title (Z-A)", "title_desc"],
+          ["Highest Rating", "rating_desc"],
+          ["Lowest Rating", "rating_asc"]
+        ], params[:sort]),
+        include_blank: "Sort By",
+        class: "form-select" %>
+</div>
+
       <div class="col-md-2">
         <%= submit_tag "Search", class: "btn btn-primary w-100" %>
       </div>
