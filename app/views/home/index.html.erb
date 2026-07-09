@@ -1,0 +1,21 @@
+<h1>Book Library</h1>
+
+<p>Welcome to my Ruby on Rails Book Library project.</p>
+
+<hr>
+
+<h2>Library Statistics</h2>
+
+<ul>
+  <li><strong>Total Books:</strong> <%= @book_count %></li>
+  <li><strong>Total Authors:</strong> <%= @author_count %></li>
+  <li><strong>Total Categories:</strong> <%= @category_count %></li>
+</ul>
+
+<hr>
+
+<h2>Browse</h2>
+
+<p><%= link_to "Browse Books", books_path %></p>
+<p><%= link_to "Browse Authors", authors_path %></p>
+<p><%= link_to "Browse Categories", categories_path %></p>

@@ -1,0 +1,40 @@
+<h1><%= @book.title %></h1>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author.name %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @book.publisher.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @book.category.name %>
+</p>
+
+<p>
+  <strong>ISBN:</strong>
+  <%= @book.isbn %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @book.language %>
+</p>
+
+<p>
+  <strong>Pages:</strong>
+  <%= @book.pages %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @book.rating %>
+</p>
+
+<hr>
+
+<%= link_to "← Back to Books", books_path %>
