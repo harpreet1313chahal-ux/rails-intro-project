@@ -1,40 +1,52 @@
-<h1><%= @book.title %></h1>
+<div class="card shadow-sm">
 
-<p>
-  <strong>Author:</strong>
-  <%= @book.author.name %>
-</p>
+  <div class="card-header bg-dark text-white">
+    <h2 class="mb-0"><%= @book.title %></h2>
+  </div>
 
-<p>
-  <strong>Publisher:</strong>
-  <%= @book.publisher.name %>
-</p>
+  <div class="card-body">
 
-<p>
-  <strong>Category:</strong>
-  <%= @book.category.name %>
-</p>
+    <table class="table table-bordered">
 
-<p>
-  <strong>ISBN:</strong>
-  <%= @book.isbn %>
-</p>
+      <tr>
+        <th width="25%">Author</th>
+        <td><%= @book.author.name %></td>
+      </tr>
 
-<p>
-  <strong>Language:</strong>
-  <%= @book.language %>
-</p>
+      <tr>
+        <th>Publisher</th>
+        <td><%= @book.publisher.name %></td>
+      </tr>
 
-<p>
-  <strong>Pages:</strong>
-  <%= @book.pages %>
-</p>
+      <tr>
+        <th>Category</th>
+        <td><%= @book.category.name %></td>
+      </tr>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @book.rating %>
-</p>
+      <tr>
+        <th>ISBN</th>
+        <td><%= @book.isbn %></td>
+      </tr>
 
-<hr>
+      <tr>
+        <th>Language</th>
+        <td><%= @book.language %></td>
+      </tr>
 
-<%= link_to "← Back to Books", books_path %>
+      <tr>
+        <th>Pages</th>
+        <td><%= @book.pages %></td>
+      </tr>
+
+      <tr>
+        <th>Rating</th>
+        <td><%= number_with_precision(@book.rating, precision: 2) %></td>
+      </tr>
+
+    </table>
+
+    <%= link_to "Back to Books", books_path, class: "btn btn-primary" %>
+
+  </div>
+
+</div>
