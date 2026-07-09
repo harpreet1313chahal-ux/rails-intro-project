@@ -8,6 +8,8 @@ end
 
   def show
     @author = Author.find(params[:id])
-    @books = @author.books.includes(:publisher, :category)
+   @books = @author.books
+                .includes(:publisher, :category)
+                .order(:title)
   end
 end
