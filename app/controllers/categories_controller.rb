@@ -8,6 +8,8 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @books = @category.books.includes(:author, :publisher)
+    @books = @category.books
+                  .includes(:author, :publisher)
+                  .order(:title)
   end
 end
