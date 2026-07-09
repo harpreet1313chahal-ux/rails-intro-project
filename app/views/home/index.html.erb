@@ -1,21 +1,56 @@
 <h1>Book Library</h1>
 
-<p>Welcome to my Ruby on Rails Book Library project.</p>
+<p>
+  Welcome to the Book Library application built with Ruby on Rails.
+  This project allows users to browse thousands of books, authors,
+  publishers, and categories.
+</p>
 
 <hr>
 
 <h2>Library Statistics</h2>
 
-<ul>
-  <li><strong>Total Books:</strong> <%= @book_count %></li>
-  <li><strong>Total Authors:</strong> <%= @author_count %></li>
-  <li><strong>Total Categories:</strong> <%= @category_count %></li>
-</ul>
+<div class="row">
+
+  <div class="col-md-4">
+    <div class="card text-center mb-3">
+      <div class="card-body">
+        <h5>Total Books</h5>
+        <h2><%= @book_count %></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card text-center mb-3">
+      <div class="card-body">
+        <h5>Total Authors</h5>
+        <h2><%= @author_count %></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card text-center mb-3">
+      <div class="card-body">
+        <h5>Total Categories</h5>
+        <h2><%= @category_count %></h2>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 <hr>
 
-<h2>Browse</h2>
+<h2>Browse Library</h2>
 
-<p><%= link_to "Browse Books", books_path %></p>
-<p><%= link_to "Browse Authors", authors_path %></p>
-<p><%= link_to "Browse Categories", categories_path %></p>
+<div class="d-flex gap-3">
+
+  <%= link_to "Browse Books", books_path, class: "btn btn-primary" %>
+
+  <%= link_to "Browse Authors", authors_path, class: "btn btn-success" %>
+
+  <%= link_to "Browse Categories", categories_path, class: "btn btn-warning" %>
+
+</div>
