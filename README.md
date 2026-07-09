@@ -1,24 +1,36 @@
-# README
+# Rails Intro Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails Book Library application developed for the Rails Intro Project.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- Browse books
+- Browse authors
+- Browse categories
+- Search books
+- Filter by category
+- Pagination
+- Bootstrap styling
+- About page
+- Dataset page
 
-* System dependencies
+## Technologies
 
-* Configuration
+- Ruby 3.4
+- Rails 8
+- SQLite3
+- Bootstrap
+- CSV
 
-* Database creation
+## Setup
 
-* Database initialization
+```bash
+bundle install
+rails db:migrate
+rails db:seed
+rails server
+```
 
-* How to run the test suite
+Open:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+http://localhost:3000
