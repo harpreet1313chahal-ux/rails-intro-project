@@ -9,9 +9,11 @@
     <table class="table table-bordered">
 
       <tr>
-        <th width="25%">Author</th>
-        <td><%= @book.author.name %></td>
-      </tr>
+  <th width="25%">Author</th>
+  <td>
+    <%= link_to @book.author.name, author_path(@book.author) %>
+  </td>
+</tr>
 
       <tr>
         <th>Publisher</th>
@@ -19,9 +21,11 @@
       </tr>
 
       <tr>
-        <th>Category</th>
-        <td><%= @book.category.name %></td>
-      </tr>
+  <th>Category</th>
+  <td>
+    <%= link_to @book.category.name, category_path(@book.category) %>
+  </td>
+</tr>
 
       <tr>
         <th>ISBN</th>
