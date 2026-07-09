@@ -1,24 +1,34 @@
-<h1>Categories</h1>
+<h1 class="mb-4">Book Categories</h1>
 
-<table class="table table-striped table-bordered">
-  <thead>
+<p class="text-muted">
+  Browse all categories in the library and see how many books belong to each category.
+</p>
+
+<table class="table table-hover table-striped table-bordered align-middle">
+
+  <thead class="table-dark">
     <tr>
       <th>Category</th>
-      <th>Total Books</th>
+      <th class="text-center">Total Books</th>
     </tr>
   </thead>
 
   <tbody>
     <% @categories.each do |category| %>
       <tr>
+
         <td>
           <%= link_to category.name, category_path(category) %>
         </td>
 
-        <td>
-          <%= category.books_count %>
+        <td class="text-center">
+          <span class="badge bg-success">
+            <%= category.books_count %>
+          </span>
         </td>
+
       </tr>
     <% end %>
   </tbody>
+
 </table>
