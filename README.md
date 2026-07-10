@@ -9,6 +9,7 @@ A Ruby on Rails Book Library application developed for the Rails Intro Project.
 - Browse categories
 - Search books
 - Filter by category
+- Sort books
 - Pagination
 - Bootstrap styling
 - About page
@@ -20,6 +21,7 @@ A Ruby on Rails Book Library application developed for the Rails Intro Project.
 - Rails 8
 - SQLite3
 - Bootstrap
+- Pagy
 - CSV
 
 ## Setup
